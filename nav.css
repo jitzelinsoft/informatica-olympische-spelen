@@ -1,0 +1,71 @@
+@import './constants.css';
+
+/* NAVIGATIE BALK OPMAAK */
+nav {
+  background-color: var(--fg-4);
+
+  display: flex;
+  position: fixed;
+  float: left;
+  justify-content: center;
+
+  width: calc(100% - 1rem);
+  height: fit-content;
+
+  inset: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+@media only screen and (max-width: 640px) {
+	nav {
+		inset: 0rem;
+		border-radius: 0px;
+	}
+  }
+
+/* NAVIGATIE BALK LINKJES OPMAAK */
+nav>a {
+  display: block;
+  color: var(--bg-1);
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+/* NAVIGATIE BALK LINKJES OPMAAK */
+nav>.active:hover { color: var(--bg-1); }
+nav>a:hover { background-color: var(--fg-3); text-decoration: none; }
+nav>.active { background-color: var(--fg-3); }
+
+/* FOOTER OPMAAK */
+footer {
+	background-color: var(--bg-1);
+	
+	float: left;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	
+	margin: 1rem;
+	padding: 1rem;
+	place-items: center;
+	
+	border-radius: 15px;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+/* FOOTER OPMAAK PER COLUMN */
+footer .column1 {
+	grid-column: 1/2;
+	width: 50%;
+}
+footer .column2 {
+	grid-column: 3/5;
+}
+footer .column3 {
+	grid-column: 5/6;
+	display: flex;
+	gap: 1rem;
+}
+footer .column3 img {
+	width: 1.5rem;
+	height: 1.5rem;
+}

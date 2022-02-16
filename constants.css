@@ -1,0 +1,27 @@
+/* Margin etc verwijderen op alles,
+om eigen in te stellen. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Kleuren die door de hele pagina gebruikt worden */
+:root {
+  --bg-1: #eceff4;
+  --bg-2: #e5e9f0;
+  --bg-3: #d8dee9;
+
+  --fg-1: #2e3440;
+  --fg-2: #3b4252;
+  --fg-3: #434c5e;
+  --fg-4: #4c566a;
+
+  --accent-1: #5e81ac;
+  --accent-2: #81a1c1;
+
+  --red: #bf616a;
+  --orange: #d08770;
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --magenta: #b48ead;
+}

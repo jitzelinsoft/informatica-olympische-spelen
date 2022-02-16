@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+
+<head>
+  <link rel="stylesheet" href="./styles.css" media="all">
+  <link rel="stylesheet" href="./nav.css" media="all">
+  <link rel="stylesheet" href="./layout.css" media="all">
+  <meta charset="utf-8">
+  <title>Olympische Winterspelen</title>
+  <link rel="icon" type="image/x-icon" href="./RESOURCES/favicon.ico">
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Deelnemers.html">Deelnemers</a>
+    <a href="TeamNL.html">Team NL</a>
+    <a href="Stadia.html">Stadia</a>
+    <a href="Kosten.html">Kosten</a>
+    <a class="active" href="Records.html">Records</a>
+  </nav>
+
+  <main>
+
+    <h2 class="centered">Records</h2>
+
+    <p>Dit zijn de schaats records van de Olympische Winterspelen op het moment. Klik op de balken om de tabellen te
+      zien.</p>
+
+    <button class="collapsible">Schaatsen (Mannen)</button>
+    <div class="content">
+      <table class="collapsetable">
+        <tr>
+          <th>Afstand</th>
+          <th>Schaatser</th>
+          <th>Land</th>
+          <th>Tijd</th>
+          <th>Datum</th>
+          <th>Baan</th>
+        </tr>
+        <tr>
+          <td class="text-right">500 meter</td>
+          <td>Håvard Holmefjord Lorentzen</td>
+          <td>Noorwegen</td>
+          <td class="text-right">34,14</td>
+          <td>19-02-2018</td>
+          <td>Gangneung</td>
+        </tr>
+        <tr>
+          <td class="text-right">1.000 meter</td>
+          <td>Gerard van Velde</td>
+          <td>Nederland</td>
+          <td class="text-right">1.07,18</td>
+          <td>16-02-2002</td>
+          <td>Salt Lake City</td>
+        </tr>
+        <tr>
+          <td class="text-right">1.500 meter</td>
+          <td>Kjeld Nuis</td>
+          <td>Nederland</td>
+          <td class="text-right">1.43,21</td>
+          <td>08-02-2022</td>
+          <td>Peking</td>
+        </tr>
+        <tr>
+          <td class="text-right">5.000 meter</td>
+          <td>Nils van der Poel</td>
+          <td>Zweden</td>
+          <td class="text-right">6.08,84</td>
+          <td>06-02-2022</td>
+          <td>Peking</td>
+        </tr>
+        <tr>
+          <td class="text-right">10.000 meter</td>
+          <td>Nils van der Poel</td>
+          <td>Zweden</td>
+          <td class="text-right">12.30,74</td>
+          <td>11-02-2022</td>
+          <td>Peking</td>
+        </tr>
+      </table>
+    </div>
+
+    <button class="collapsible">Schaatsen (Vrouwen)</button>
+    <div class="content">
+      <table class="collapsetable">
+        <tr>
+          <th>Afstand</th>
+          <th>Schaatser</th>
+          <th>Land</th>
+          <th>Tijd</th>
+          <th>Datum</th>
+          <th>Baan</th>
+        </tr>
+        <tr>
+          <td class="text-right">500 meter</td>
+          <td>Nao Kodaira</td>
+          <td>Japan</td>
+          <td class="text-right">36,94</td>
+          <td>18-02-2018</td>
+          <td>Gangneung</td>
+        </tr>
+        <tr>
+          <td class="text-right">1.000 meter</td>
+          <td>Jorien ter Mors</td>
+          <td>Nederland</td>
+          <td class="text-right">1.13,56</td>
+          <td>14-02-2018</td>
+          <td>Gangneung</td>
+        </tr>
+        <tr>
+          <td class="text-right">1.500 meter</td>
+          <td>Ireen Wüst</td>
+          <td>Nederland</td>
+          <td class="text-right">1.53,28</td>
+          <td>07-02-2022</td>
+          <td>Peking</td>
+        </tr>
+        <tr>
+          <td class="text-right">3.000 meter</td>
+          <td>Irene Schouten</td>
+          <td>Nederland</td>
+          <td class="text-right">3.56,93</td>
+          <td>05-02-2022</td>
+          <td>Peking</td>
+        </tr>
+        <tr>
+          <td class="text-right">5.000 meter</td>
+          <td>Irene Schouten</td>
+          <td>Nederland</td>
+          <td class="text-right">6.43,51</td>
+          <td>10-02-2022</td>
+          <td>Peking</td>
+        </tr>
+      </table>
+    </div>
+
+  </main>
+
+  <footer>
+
+    <div class="column1">
+      <img src="./RESOURCES/Olympisch-Logo.gif" alt="Olympisch logo" style="width: 100%">
+    </div>
+
+    <div class="column2">
+      <h4>Makers:</h4>
+      <ul>
+        <li>Jeffrey Huang</li>
+        <li>Jitze Lindeboom</li>
+      </ul>
+    </div>
+
+    <div class="column3">
+      <img src="./RESOURCES/github.png" alt="Github Logo">
+      <a target="_blank" href="https://github.com/Toxicstic/informatica-olympische-spelen">Source Code</a>
+    </div>
+
+  </footer>
+
+  <!-- Stukje JS voor de tabellen -->
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("tableactive");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
+
+</body>
+
+</html>

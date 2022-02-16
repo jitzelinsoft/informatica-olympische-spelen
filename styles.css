@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './constants.css';
+
+/*
+ *	ALGEMENE TEXT STIJLEN
+ */
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 6rem;
+  margin-bottom: 5rem;
+  font-weight: 400;
+  color: var(--fg-1);
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--fg-2);
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  font-weight: 400;
+  color: var(--fg-2);
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+  font-weight: 400;
+  color: var(--fg-3);
+}
+
+p {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 150%;
+  text-indent: 0rem;
+  margin-bottom: 1rem;
+  color: var(--fg-2);
+}
+
+p+p {
+  text-indent: 1rem !important;
+}
+
+li {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: var(--fg-2);
+  margin-bottom: 0.3rem;
+}
+
+/*
+ *	ANDERE ELEMENTEN
+ */
+
+button {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--bg-1); 
+  border: transparent solid 1px;
+  transition: background-color 0.3s, border 0.3s;
+  transition-timing-function: ease-out;
+  box-sizing: border-box;
+}
+
+button.alt       { background-color: var(--bg-3) }
+button.alt:hover { background-color: var(--bg-2); border: var(--fg-4) solid 1px; }
+
+ul,ol { margin-bottom: 1rem; list-style-position: inside; }
+
+button:hover {
+  background-color: var(--bg-3);
+  cursor: pointer;
+}
+
+a {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: var(--accent-1);
+  transition: color 0.5s;
+  text-decoration: underline dotted;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--accent-2);
+  text-decoration: var(--accent-2) underline solid;
+  transition-timing-function: ease-out;
+}
+
+/* 
+ * VAAK GEBRUIKTE CLASSES 
+*/
+
+.block {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.centered {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.right {
+  float: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/*
+ *	TABELLEN OPMAAK
+ */
+
+table {
+  border-collapse: collapse;
+  border: var(--fg-1) solid 1px collapse; 
+}
+.collapsetable {
+  margin: auto;
+  width: 95%;
+}
+
+th {
+  font-family: "Roboto", sans-serif;
+  color: var(--fg-1);
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: var(--bg-3);
+}
+td {
+  font-family: "Roboto Slab", serif; 
+  color: var(--fg-2);
+}
+td,th {
+  font-size: 1rem;
+  border: var(--fg-1) solid thin;
+  padding: 0.5rem
+}
+
+/* RECORD TABLE OPMAAK */
+.text-right {
+    text-align: right;
+}
+
+/* Alles voor de javascript van de Records pagina */
+.collapsible {
+  background-color: var(--fg-4);
+  color: var(--bg-1);
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.tableactive, .collapsible:hover {
+  background-color: var(--fg-2);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: var(--bg-1);
+  float: right;
+  margin-left: 1rem;
+}
+
+.tableactive:after {
+	content: "\2212";
+}
+
+.content {
+  margin: 1rem 0 1rem 0px;
+  padding: 0px 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+}

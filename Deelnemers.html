@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+
+<head>
+  <link rel="stylesheet" href="./styles.css" media="all">
+  <link rel="stylesheet" href="./nav.css" media="all">
+  <link rel="stylesheet" href="./layout.css" media="all">
+  <meta charset="utf-8">
+  <title>Olympische Winterspelen</title>
+  <link rel="icon" type="image/x-icon" href="./RESOURCES/favicon.ico">
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="Deelnemers.html">Deelnemers</a>
+    <a href="TeamNL.html">Team NL</a>
+    <a href="Stadia.html">Stadia</a>
+    <a href="Kosten.html">Kosten</a>
+    <a href="Records.html">Records</a>
+  </nav>
+
+  <main class="deelnemers">
+
+    <h2 class="centered">Deelnemers</h2>
+
+    <p>Hier is een handig overzicht van alle spelers van de Olympische Winterspelen van 2022, met zoek en filter
+      functies. Dit is een Iframe en hebben wij niet zelf gemaakt, deze is afkomstig van <a target="_blank"
+        href="https://olympics.com/beijing-2022/olympic-games/en/results/all-sports/athletes.htm">deze</a> website.</p>
+
+<!-- scrolling="no" en overflow: hidden staan er in omdat nog niet alle browsers overflow: hidden ondersteunen -->
+	  
+    <div style="overflow: hidden;max-width: 575px;">
+      <iframe src="https://olympics.com/beijing-2022/olympic-games/en/results/all-sports/athletes.htm"
+        style="border: 0px none; margin-left: -36px; height: 2000px; margin-top: -486px; width: 650px; overflow: hidden" scrolling="no"></iframe>
+    </div>
+
+  </main>
+
+  <footer>
+
+    <div class="column1">
+      <img src="./RESOURCES/Olympisch-Logo.gif" alt="Olympisch logo" style="width: 100%">
+    </div>
+
+    <div class="column2">
+      <h4>Makers:</h4>
+      <ul>
+        <li>Jeffrey Huang</li>
+        <li>Jitze Lindeboom</li>
+      </ul>
+    </div>
+
+    <div class="column3">
+      <img src="./RESOURCES/github.png" alt="Github Logo">
+      <a target="_blank" href="https://github.com/Toxicstic/informatica-olympische-spelen">Source Code</a>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
